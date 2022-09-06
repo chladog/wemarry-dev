@@ -12,3 +12,12 @@ if (environment.production) {
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch((err) => console.error(err));
+
+export function wmDevHookData(target: any) {
+  const wmDev = document.querySelector('wmDev');
+  if (wmDev) {
+    wmDev.addEventListener('data', ({ detail }: any) => {
+      target.data$ = detail;
+    });
+  }
+}
