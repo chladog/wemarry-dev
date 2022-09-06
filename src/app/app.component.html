@@ -1,6 +1,9 @@
-<div [style.display]="view === 'content' ? 'block' : 'none'">
-  <slot></slot>
-  <ng-content></ng-content>
-</div>
-<app-elements *ngIf="view === 'elements'"></app-elements>
+<ng-container *ngIf="view === 'content'">
+  <ng-container *ngTemplateOutlet="contentTmpl"></ng-container>
+</ng-container>
+<wm-dev-elements *ngIf="view === 'elements'"></wm-dev-elements>
 <div class="wm-dev-toggle-view" (click)="toggleView()">View</div>
+
+<ng-template #contentTmpl>
+  <ng-content></ng-content>
+</ng-template>

@@ -1,5 +1,3 @@
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import {
   AfterContentChecked,
   AfterContentInit,
@@ -9,10 +7,9 @@ import {
 } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
-import { ElementsComponent } from './elements/elements.component';
 
 @Component({
-  selector: 'wm-dev',
+  selector: 'wm-dev-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

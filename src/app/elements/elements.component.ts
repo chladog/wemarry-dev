@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-elements',
+  selector: 'wm-dev-elements',
   templateUrl: './elements.component.html',
   styleUrls: ['./elements.component.scss'],
 })
