@@ -1,10 +1,5 @@
-<ng-container *ngIf="view === 'content'">
-  <ng-container *ngTemplateOutlet="slotTmpl"></ng-container>
-</ng-container>
-<app-elements *ngIf="view === 'elements'; else slotTmpl"></app-elements>
-<div class="wm-dev-toggle-view" (click)="toggleView()">View</div>
-
-<ng-template #slotTmpl>
+<div [style.visibility]="view === 'content' ? 'visible' : 'hidden'">
   <slot></slot>
-  <ng-content></ng-content>
-</ng-template>
+</div>
+<app-elements *ngIf="view === 'elements'"></app-elements>
+<div class="wm-dev-toggle-view" (click)="toggleView()">View</div>
