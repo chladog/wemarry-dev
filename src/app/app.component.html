@@ -1,5 +1,6 @@
 <div [style.visibility]="view === 'content' ? 'visible' : 'hidden'">
   <slot></slot>
+  <ng-content></ng-content>
 </div>
 <app-elements *ngIf="view === 'elements'"></app-elements>
 <div class="wm-dev-toggle-view" (click)="toggleView()">View</div>
