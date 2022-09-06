@@ -39,7 +39,7 @@ export class AppComponent
     this.emitEvent('ngOnInit');
     this.api.emit({
       data$: this.data.data$,
-      hookDataTo: this.hookData,
+      hookData: this.hookData,
     });
   }
   ngAfterViewInit(): void {
