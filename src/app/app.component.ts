@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'wm-dev',
+  selector: '',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
