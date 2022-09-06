@@ -66,7 +66,7 @@ export class AppComponent
   hookDataTo(target: any) {
     const wmDev = document.querySelector('wmDev');
     if (wmDev) {
-      wmDev.addEventListener('data', ({ detail }: any) => {
+      wmDev.addEventListener('api', ({ detail }: any) => {
         target.data$ = detail;
       });
     }
