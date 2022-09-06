@@ -2,7 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'platform',
+})
 export class DataService {
   data$ = this.http
     .post('/api/graphql?locale=cs&fallbackLocale=cs', {

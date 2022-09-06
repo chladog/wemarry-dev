@@ -17,7 +17,6 @@ import { ElementsComponent } from './elements/elements.component';
   styleUrls: ['./app.component.scss'],
   standalone: true,
   imports: [CommonModule, HttpClientModule, ElementsComponent],
-  providers: [DataService],
 })
 export class AppComponent
   implements OnInit, AfterViewInit, AfterContentInit, AfterContentChecked
