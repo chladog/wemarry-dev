@@ -25,7 +25,7 @@ export class AppComponent
   view = 'elements';
 
   @Output() lifeCycle = new EventEmitter();
-  @Output('data') dataEmitter = new EventEmitter();
+  @Output() api = new EventEmitter();
   constructor(public data: DataService) {
     this.view = localStorage.getItem('wm-dev-view') || 'elements';
   }
@@ -37,7 +37,10 @@ export class AppComponent
   }
   ngOnInit(): void {
     this.emitEvent('ngOnInit');
-    this.dataEmitter.emit(this.data.data$);
+    this.api.emit({
+      data$: this.data.data$,
+      hookDataTo: this.hookDataTo,
+    });
   }
   ngAfterViewInit(): void {
     this.emitEvent('ngAfterViewInit');
@@ -58,5 +61,14 @@ export class AppComponent
       instance: this,
       service: this.data,
     });
+  }
+
+  hookDataTo(target: any) {
+    const wmDev = document.querySelector('wmDev');
+    if (wmDev) {
+      wmDev.addEventListener('data', ({ detail }: any) => {
+        target.data$ = detail;
+      });
+    }
   }
 }
