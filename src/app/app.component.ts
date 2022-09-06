@@ -37,7 +37,7 @@ export class AppComponent
   }
   ngOnInit(): void {
     this.emitEvent('ngOnInit');
-    this.dataEmitter.emit(this.data);
+    this.dataEmitter.emit(this.data.data$);
   }
   ngAfterViewInit(): void {
     this.emitEvent('ngAfterViewInit');
