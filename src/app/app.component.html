@@ -1,5 +1,10 @@
 <ng-container *ngIf="view === 'content'">
-  <slot></slot>
+  <ng-container *ngTemplateOutlet="slotTmpl"></ng-container>
 </ng-container>
-<app-elements *ngIf="view === 'elements'"></app-elements>
+<app-elements *ngIf="view === 'elements'; else slotTmpl"></app-elements>
 <div class="wm-dev-toggle-view" (click)="toggleView()">View</div>
+
+<ng-template #slotTmpl>
+  <slot></slot>
+  <ng-content></ng-content>
+</ng-template>
