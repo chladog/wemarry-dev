@@ -64,6 +64,8 @@ export class AppComponent
   }
 
   hookData(target: any) {
-    target.data$ = this.data.data$;
+    target.addEventListener('lifeCycle', ({ detail }: any) => {
+      target.data$ = this.data.data$;
+    });
   }
 }
