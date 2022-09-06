@@ -4,7 +4,6 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-elements',
   templateUrl: './elements.component.html',
   styleUrls: ['./elements.component.scss'],
-  standalone: true,
 })
 export class ElementsComponent implements OnInit {
   constructor() {}

@@ -15,8 +15,6 @@ import { ElementsComponent } from './elements/elements.component';
   selector: 'wm-dev',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [CommonModule, HttpClientModule, ElementsComponent],
 })
 export class AppComponent
   implements OnInit, AfterViewInit, AfterContentInit, AfterContentChecked
