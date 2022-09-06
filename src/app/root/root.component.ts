@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'wm-dev',
   templateUrl: './root.component.html',
-  styleUrls: ['./root.component.scss']
+  styleUrls: ['./root.component.scss'],
 })
 export class RootComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
