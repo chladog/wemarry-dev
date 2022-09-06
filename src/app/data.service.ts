@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'platform',
-})
+@Injectable()
 export class DataService {
   data$ = this.http.post('/api/graphql?locale=cs&fallbackLocale=cs', {
     operationName: 'Wedding',
