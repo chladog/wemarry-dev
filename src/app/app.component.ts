@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
 
 @Component({
-  selector: 'wm-dev-root',
+  selector: '',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
