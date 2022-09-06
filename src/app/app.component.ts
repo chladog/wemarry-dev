@@ -39,7 +39,7 @@ export class AppComponent
     this.emitEvent('ngOnInit');
     this.api.emit({
       data$: this.data.data$,
-      hookData: this.hookData,
+      // hookData: this.hookData,
     });
   }
   ngAfterViewInit(): void {
@@ -60,13 +60,6 @@ export class AppComponent
       event: name,
       instance: this,
       service: this.data,
-    });
-  }
-
-  hookData(target: any) {
-    target.addEventListener('lifeCycle', ({ detail }: any) => {
-      console.log(detail);
-      detail.instance.data$ = this.data.data$;
     });
   }
 }

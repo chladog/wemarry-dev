@@ -10,7 +10,6 @@ import { createCustomElement } from '@angular/elements';
 export class AppModule {
   constructor(private injector: Injector) {}
   ngDoBootstrap() {
-    console.log(this.injector);
     const rootCE = createCustomElement(AppComponent, {
       injector: this.injector,
     });
