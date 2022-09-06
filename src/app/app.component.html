@@ -1,4 +1,4 @@
-<div [style.visibility]="view === 'content' ? 'visible' : 'hidden'">
+<div [style.display]="view === 'content' ? 'block' : 'none'">
   <slot></slot>
   <ng-content></ng-content>
 </div>
