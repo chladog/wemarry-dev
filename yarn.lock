@@ -23,7 +23,7 @@
     "@angular-devkit/core" "14.2.1"
     rxjs "6.6.7"
 
-"@angular-devkit/build-angular@^14.2.1":
+"@angular-devkit/build-angular@>=14.0.0", "@angular-devkit/build-angular@^14.2.1":
   version "14.2.1"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-14.2.1.tgz#d4b5ac1fa81a0e41f2b0f7b282a9b2d17227408b"
   integrity sha512-6FeIe2nsNH/fslZmTfbo+RCjLk3HuCQa5rb/SFf3w0mwzWCrhV0/SqnQ4+YYgkKrohmTX+q5JmJPwWnkqgdIgQ==
@@ -1461,7 +1461,7 @@
     read-package-json-fast "^2.0.3"
     which "^2.0.2"
 
-"@schematics/angular@14.2.1":
+"@schematics/angular@14.2.1", "@schematics/angular@>=14.0.0":
   version "14.2.1"
   resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-14.2.1.tgz#00f54cb6b30dc1945b6d344ca225c04dcc12f682"
   integrity sha512-Dchixep/FMETAMuyFchw9Nryi7tfuZQRumzIOtQpv+KaVtfjvcIlES0KuI0U3Qh7tGIYPBmO3Mkt3oojcl2RBA==
@@ -4324,6 +4324,15 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ngx-build-plus@14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-build-plus/-/ngx-build-plus-14.0.0.tgz#7e2b896072773159c61684c287d4eb8dc5e8b5d5"
+  integrity sha512-Rq23dNx9jL34+hbCrSa7LYrkopZpKN6WGAfPRaFlCeuJ/b5YIPVk8cePjj3/CDZr7LlNPedTrEtMC1dpG4AXww==
+  dependencies:
+    "@angular-devkit/build-angular" ">=14.0.0"
+    "@schematics/angular" ">=14.0.0"
+    webpack-merge "^5.0.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
@@ -6182,7 +6191,7 @@ webpack-dev-server@4.10.0:
     webpack-dev-middleware "^5.3.1"
     ws "^8.4.2"
 
-webpack-merge@5.8.0:
+webpack-merge@5.8.0, webpack-merge@^5.0.0:
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-5.8.0.tgz#2b39dbf22af87776ad744c390223731d30a68f61"
   integrity sha512-/SaI7xY0831XwP6kzuwhKWVKDP9t1QY1h65lAFLbZqMPIuYcD9QAW4u9STIbU9kaJbPBB/geU/gLr1wDjOhQ+Q==

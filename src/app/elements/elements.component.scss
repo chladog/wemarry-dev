@@ -1,0 +1,13 @@
+:host {
+  max-width: 100%;
+}
+
+.border-demos > div {
+  display: grid;
+  place-content: center;
+  inline-size: var(--size-fluid-6);
+  aspect-ratio: var(--ratio-square);
+  border-color: var(--color-accent);
+  border-width: var(--border-size-2);
+  font-size: var(--font-size-4);
+}
