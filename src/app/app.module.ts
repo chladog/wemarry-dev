@@ -6,13 +6,14 @@ import { createCustomElement } from '@angular/elements';
   declarations: [],
   imports: [BrowserModule],
   providers: [],
+  bootstrap: [],
 })
 export class AppModule {
   constructor(private injector: Injector) {}
-  ngDoBootstrap() {
-    const rootCE = createCustomElement(AppComponent, {
-      injector: this.injector,
-    });
-    customElements.define('wm-dev', rootCE);
-  }
+  // ngDoBootstrap() {
+  //   const rootCE = createCustomElement(AppComponent, {
+  //     injector: this.injector,
+  //   });
+  //   customElements.define('wm-dev', rootCE);
+  // }
 }

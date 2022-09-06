@@ -12,7 +12,7 @@ import { DataService } from './data.service';
 import { ElementsComponent } from './elements/elements.component';
 
 @Component({
-  selector: '',
+  selector: 'wm-dev',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
