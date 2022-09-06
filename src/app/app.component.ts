@@ -39,7 +39,7 @@ export class AppComponent
     this.emitEvent('ngOnInit');
     this.api.emit({
       data$: this.data.data$,
-      hookDataTo: this.hookDataTo,
+      hookDataTo: this.hookData,
     });
   }
   ngAfterViewInit(): void {
@@ -63,12 +63,7 @@ export class AppComponent
     });
   }
 
-  hookDataTo(target: any) {
-    const wmDev = document.querySelector('wmDev');
-    if (wmDev) {
-      wmDev.addEventListener('api', ({ detail }: any) => {
-        target.data$ = detail;
-      });
-    }
+  hookData(target: any) {
+    target.data$ = this.data.data$;
   }
 }
